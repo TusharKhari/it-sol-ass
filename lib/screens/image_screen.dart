@@ -72,62 +72,65 @@ class _ImageScreenState extends State<ImageScreen> {
                                 },
                               );
                             },
-                            child: Stack(
-                              alignment: Alignment.bottomCenter,
-                              children: [
-                                CachedNetworkImage(
-                                  imageUrl: imageData.largeImageURL ?? "",
-                                  fit: BoxFit.fill,
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.all(4),
-                                      margin: const EdgeInsets.all(4),
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            "${imageData.views}",
-                                            overflow:
-                                                TextOverflow.ellipsis,
-                                          ),
-                                          const Icon(
-                                            Icons.favorite,
-                                            size: 15,
-                                          ),
-                                        ],
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Stack(
+                                alignment: Alignment.bottomCenter,
+                                children: [
+                                  CachedNetworkImage(
+                                    imageUrl: imageData.largeImageURL ?? "",
+                                    fit: BoxFit.fill,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(4),
+                                        margin: const EdgeInsets.all(4),
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              "${imageData.views}",
+                                              overflow:
+                                                  TextOverflow.ellipsis,
+                                            ),
+                                            const Icon(
+                                              Icons.favorite,
+                                              size: 15,
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(4),
-                                      margin: const EdgeInsets.all(4),
-                                      decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(20)),
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            "${imageData.likes.toString()}",
-                                            overflow:
-                                                TextOverflow.ellipsis,
-                                          ),
-                                          const Icon(
-                                            Icons.visibility,
-                                            size: 15,
-                                          ),
-                                        ],
+                                      Container(
+                                        padding: const EdgeInsets.all(4),
+                                        margin: const EdgeInsets.all(4),
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(20)),
+                                        child: Row(
+                                          children: [
+                                            Text(
+                                              "${imageData.likes.toString()}",
+                                              overflow:
+                                                  TextOverflow.ellipsis,
+                                            ),
+                                            const Icon(
+                                              Icons.visibility,
+                                              size: 15,
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           );
                         },
